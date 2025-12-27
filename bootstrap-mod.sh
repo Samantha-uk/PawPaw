@@ -187,18 +187,18 @@ fi # PAWPAW_SKIP_JUCE
 
 if [ -z "${PAWPAW_SKIP_JUCE}" ] || [ "${PAWPAW_SKIP_JUCE}" -eq 0 ]; then
 
-JUCE_7_0_VERSION="c3099e733e90b8a2e7071698980abd70efb9a4e7"
+JUCE_7_0_VERSION="32979563345db3995e15d5c489b6a240db16b740"
 JUCE_7_0_URL="https://github.com/DISTRHO/JUCE.git"
 
 JUCE_7_0_EXTRAFLAGS=""
 JUCE_7_0_EXTRAFLAGS+=" -DCMAKE_INSTALL_PREFIX=${PAWPAW_PREFIX}"
 JUCE_7_0_EXTRAFLAGS+=" -DJUCE_BUILD_HELPER_TOOLS=ON"
-JUCE_7_0_EXTRAFLAGS+=" -DJUCE_INSTALL_DESTINATION=lib/cmake/JUCE-7.0.9"
+JUCE_7_0_EXTRAFLAGS+=" -DJUCE_INSTALL_DESTINATION=lib/cmake/JUCE-7.0.12"
 
 download juce-7.0 "${JUCE_7_0_VERSION}" "${JUCE_7_0_URL}" "" "git"
 build_host_cmake juce-7.0 "${JUCE_7_0_VERSION}" "${JUCE_7_0_EXTRAFLAGS}"
 
-link_target_file juce-7.0 "${JUCE_7_0_VERSION}" "JUCEConfig.cmake" "lib/cmake/JUCE-7.0.9/JUCE-7.0.9Config.cmake"
+link_target_file juce-7.0 "${JUCE_7_0_VERSION}" "JUCEConfig.cmake" "lib/cmake/JUCE-7.0.12/JUCE-7.0.12Config.cmake"
 install_file juce-7.0 "${JUCE_7_0_VERSION}" "build/extras/Build/juceaide/juceaide_artefacts/Release/juceaide" "bin" "juceaide70"
 
 fi # PAWPAW_SKIP_JUCE

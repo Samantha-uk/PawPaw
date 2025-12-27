@@ -107,7 +107,7 @@ if [ "${WIN32}" -eq 1 ]; then
     else
         s=""
     fi
-    sed -i -e "s/-L\${libdir} -ljack${s}/-L\${libdir} -Wl,-Bdynamic -ljackserver${s} -Wl,-Bstatic/" "${PAWPAW_PREFIX}/lib/pkgconfig/jack.pc"
+    sed -i -e "s/-L\${libdir} -ljack${s}/\${libdir}/libjackserver${s}.dll/" "${PAWPAW_PREFIX}/lib/pkgconfig/jack.pc"
 fi
 
 # ---------------------------------------------------------------------------------------------------------------------

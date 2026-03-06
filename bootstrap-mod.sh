@@ -66,7 +66,7 @@ build_make hylia "${HYLIA_VERSION}" "${HYLIA_EXTRAFLAGS}"
 # ---------------------------------------------------------------------------------------------------------------------
 # jack2
 
-JACK2_VERSION="e3060021cd53fcd8316593c6cf6dc7ed5f127777"
+JACK2_VERSION="44286eca6f68adbfb7cb5e90d5c1c31082a97317"
 JACK2_URL="https://github.com/mod-audio/jack2.git"
 
 JACK2_EXTRAFLAGS=""
